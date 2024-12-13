@@ -36,7 +36,7 @@ class SpeedTest():
 				print("Starting Speed Test")
 				st = speedtestCLI(self.Server)
 				if (st.exitCode == 0) and (st.packetLoss != "N/A"):
-					data[1:5] = str(st.serverName), str(round(int(st.downloadSpeed) / 125000, 2)), str(round(int(st.uploadSpeed) / 125000, 2)), str(round(float(st.packetLoss), 1)) + "%", str(st.shareUrl)
+					data[1:6] = str(st.serverName), str(round(int(st.downloadSpeed) / 125000, 2)), str(round(int(st.uploadSpeed) / 125000, 2)), str(round(float(st.packetLoss), 1)) + "%", str(st.shareUrl)
 					count = 3
 				else:
 					data[10] = str(st.error)
