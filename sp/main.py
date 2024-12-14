@@ -26,9 +26,9 @@ class SpeedTest():
 			data = ["", "", "", "", "", "", "", "", "", "", ""]
 			p = ping(timeout=self.nextInterval())
 			if p.packetLoss != "":
-				data[6:9] = str(p.avgPing), str(p.maxPing), str(p.minPing), str(round(float(p.packetLoss), 1)) + "%"
+				data[6:10] = str(p.avgPing), str(p.maxPing), str(p.minPing), str(round(float(p.packetLoss), 1)) + "%"
 			else:
-				data[6:9] = str(""), str(""), str(""), str("")
+				data[6:10] = str(""), str(""), str(""), str("")
 				sleep(self.nextInterval())
 
 			count = 0
